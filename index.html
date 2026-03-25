@@ -5,8 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
 </head>
 <body>
-    <span>TEST!</span>
+    <div class="container">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="header-logo">
+                <img
+                    class="img-logo"
+                    src=""
+                    alt="logo"/>
+                <span>Dashboard</span>
+            </div>
+            <ul class="sidebar-main-menu">
+                <li>
+                    <span class="material-symbols-outlined">home</span>
+                    Home</li>
+                <li>Profile</li>
+                <li>Messages</li>
+                <li>History</li>
+                <li>Tasks</li>
+                <li>Communites</li>
+            </ul>
+            <ul class="sidebar-secondary-menu">
+                <li>Settings</li>
+                <li>Support</li>
+                <li>Privacy</li>
+            </ul>
+
+        </div>
+            <!-- header -->
+            <div class="header">
+                <div class="header-row-01">
+                    <input
+                        type="text"
+                        id="search"
+                        name="search" />
+                    <div class="header-row-01-user">Username</div>
+                    </div>
+                <div class="header-row-02">
+                    <span>Hi there,</span>
+                    <span class="header-row-02-user">Username (@username)</span>
+                    <input type="button"
+                        id="btn-new"
+                        name="btn-new"
+                        value="New" />
+                    <input type="button"
+                        id="btn-upload"
+                        name="btn-upload"
+                        value="Upload" />
+                    <input type="button"
+                        id="btn-share"
+                        name="btn-share"
+                        value="Share" />
+                </div>
+            </div>
+            <!-- main area -->
+            <div class="main">
+            </div>
+    </div>
 </body>
 </html>
