@@ -88,18 +88,13 @@ body {
 .sidebar a:link,
 .sidebar a:visited {
     color: inherit;
-    transition: all 100ms ease-in-out;
+    transition: transform 100ms ease-in-out;
 }
 
 .sidebar a:hover {
     transform: 
         scale(1.1)
         translateX(0.8em);
-}
-
-.sidebar a:active {
-    margin: 0;
-    transition: all 100ms ease-in-out;
 }
 
 .sidebar a span:not(.material-symbols-outlined) {
