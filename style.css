@@ -145,6 +145,14 @@ body {
 }
 
 
+.avatar-small {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
 /* .header input[type="button"] {
     background-color:  rgb(45, 130, 221);
     color: rgb(244, 244, 220);
