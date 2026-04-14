@@ -27,8 +27,8 @@ ul, ol {
 html, body {
     height: 100%;
     margin: 0;
-    overflow: hidden;
 }
+
 body {
     font-family: sans-serif;
     font-weight: 900;
@@ -37,10 +37,9 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: minmax(180px, 1fr) 4fr;
+    grid-template-columns: minmax(180px, 1fr) 6fr;
     grid-template-rows: auto 1fr;
     height: 100%;
-    overflow: hidden;
 }
 
 /* sidebar styles */
@@ -53,13 +52,13 @@ body {
 }
 
 .header-logo {
-    font-size: clamp(0.8rem, 9cqw, 2rem);
+    font-size: clamp(0.8em, 1.5em, 3em);
     display: flex;
     align-items: center;
 }
 
 .header-logo span.material-symbols-outlined {
-    font-size: clamp(0.8rem, 10cqw, 2.5rem);
+    font-size: clamp(0.8em, 2em, 2.5em);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +78,7 @@ body {
     align-items: center;
     white-space: nowrap;
     gap: 1em;
-    font-size: clamp(0.8rem, 6cqw, 1.4rem);
+    font-size: clamp(0.8em, 1.5em, 3em);
 }
 
 .sidebar .material-symbols-outlined {
@@ -299,12 +298,12 @@ form {
 /* main section */
 .main {
     display: grid;
-    grid-template-columns: 11fr 5fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
     background-color: rgb(240, 240, 240);
     padding: 0.5em 2em;
     min-height: 0;
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .main-left, .main-right {
@@ -312,7 +311,7 @@ form {
     display: flex;
     flex-flow: column;
     margin: 0;
-    justify-content: flex-start;
+    /* justify-content: space-evenly; */
     container-type: inline-size;
 }
 
@@ -322,7 +321,7 @@ form {
 
 .main-title {
     display: block;
-    font-size: clamp(0.2em, 1.25vw, 5em);
+    font-size: clamp(0.2em, 1.1em, 5em);
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     margin: 0;
@@ -333,8 +332,9 @@ form {
     display: grid;
     gap: 1.5em;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: min-content;
+    grid-auto-rows: auto;
     height: 100%;
+    overflow-x: auto;
 }
 
 .project-title, .announcement-title {
@@ -342,6 +342,7 @@ form {
 }
 
 .project-card {
+    font-size: clamp(0.2em, 1.1em, 5em);
     border-left: 1em solid rgb(255, 213, 43);
 }
 
@@ -398,7 +399,6 @@ form {
 .container-announcements, .container-trending {
     display: flex;
     flex-flow: column;
-    gap: 0.8em;
     /* margin-bottom: 2em; */
 }
 
@@ -407,7 +407,6 @@ form {
 .trending {
     font-weight: 100;
     text-align: justify;
-    font-size: clamp(0.2em, 0.8em, 5em);
     line-height: 1.5;
 
     background-color: white;
@@ -415,6 +414,11 @@ form {
     border-radius: 0.5em;
     box-shadow: 0em 0.3em 0.5em grey;
     margin-bottom: 0;
+}
+
+.announcements,
+.trending {
+    font-size: clamp(0.2em, 0.8em, 5em);
 }
 
 .announcement-card {
