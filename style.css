@@ -3,7 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
     text-decoration: none;
-    outline: 1px solid red !important;
+    /* outline: 1px solid red !important; */
 }
 
 ul, ol {
@@ -25,6 +25,8 @@ ul, ol {
 }
 
 html, body {
+    min-height: 400px;
+    min-width: 600px;
     height: 100%;
     font-size: 7px;
     line-height: 1.5;
@@ -42,6 +44,8 @@ body {
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 4fr;
     height: 100vh;
+    min-height: inherit;
+    min-width: inherit;
 }
 
 /* sidebar styles */
@@ -55,13 +59,13 @@ body {
 }
 
 .header-logo {
-    font-size: clamp(0.8rem, 0.5rem + 1.4vw, 5rem);
+    font-size: clamp(0.8rem, 0.5rem + 1.2vw, 5rem);
     display: flex;
     align-items: center;
 }
 
 .header-logo span.material-symbols-outlined {
-    font-size: clamp(0.8rem, 0.5rem + 1.4vw, 5rem);
+    font-size: clamp(0.8rem, 0.5rem + 1.2vw, 5rem);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +135,6 @@ body {
     z-index: 10;
     box-shadow: 0em 0.3em 0.5em grey;
     padding: 0em 2.5em;
-    min-width: 600px;
     font-size: clamp(0.5rem, 0.25rem + 0.7vw, 5rem);
 
 }
@@ -317,7 +320,6 @@ form {
     height: 100%;
     padding: 1em;
     margin: 0;
-    /* justify-content: space-evenly; */
     box-sizing: border-box;
 }
 
@@ -407,7 +409,6 @@ form {
     display: flex;
     flex-flow: column;
     flex-grow: 0;
-    /* margin-bottom: 2em; */
 }
 
 .project-card,
@@ -416,7 +417,6 @@ form {
     font-weight: 100;
     text-align: justify;
     line-height: 1.5;
-    flex-grow: 0;
 
     background-color: white;
     padding: 1.5em;
@@ -430,9 +430,15 @@ form {
     font-size: clamp(0.5rem, 0.25rem + 0.5vw, 5rem);
 }
 
+.announcements,
+.trending-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
 .announcement-card {
     position: relative;
-    /* padding: 0.5em 0; */
 }
 
 /* add line between each displayed card */
@@ -449,8 +455,8 @@ form {
 .trending {
     display: flex;
     flex-direction: column;
-    gap: 1em;
     height: 100%;
+    gap: 1em;
     box-sizing: border-box;
     justify-content: space-between;
 }
@@ -458,12 +464,6 @@ form {
 .trending-card {
     display: grid;
     grid-template-columns: min-content 1fr;
-}
-
-.trending-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
 }
 
 .trending-card img {
