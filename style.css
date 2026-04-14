@@ -26,6 +26,8 @@ ul, ol {
 
 html, body {
     height: 100%;
+    font-size: 7px;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
 }
@@ -33,33 +35,33 @@ html, body {
 body {
     font-family: sans-serif;
     font-weight: 900;
-    font-size: 12px;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 4fr;
     height: 100vh;
 }
 
 /* sidebar styles */
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
-    /* padding: 1em; */
+    padding: 1em;
+    min-width: 98px;
     background-color: rgb(45, 130, 221);
     color: rgb(244, 244, 220);
     container-type: inline-size;
 }
 
 .header-logo {
-    font-size: clamp(0.8em, 1.5em, 3em);
+    font-size: clamp(0.8rem, 0.5rem + 1.4vw, 5rem);
     display: flex;
     align-items: center;
 }
 
 .header-logo span.material-symbols-outlined {
-    font-size: clamp(0.8em, 2em, 2.5em);
+    font-size: clamp(0.8rem, 0.5rem + 1.4vw, 5rem);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -79,14 +81,16 @@ body {
     align-items: center;
     white-space: nowrap;
     gap: 1em;
-    font-size: clamp(0.8em, 1.5em, 3em);
+    font-size: clamp(0.5rem, 0.25rem + 1vw, 5rem);
 }
 
 .sidebar .material-symbols-outlined {
-    font-size: 0.9em;
+    font-size: clamp(0.5rem, 0.25rem + 1vw, 5rem);
+    width: 1.5em;
+    height: 1.5em;
     line-height: 1;
     display: inline-flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     margin-right: 0.4em;
 }
@@ -122,19 +126,18 @@ body {
 .header {
     grid-area: 1 / 2 / 2 / 3 ;
     display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    position: relative;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
     z-index: 10;
-    row-gap: 1.25em;
     box-shadow: 0em 0.3em 0.5em grey;
-    /* padding: 1em 2.5em; */
-    container-type: inline-size;
-    font-size: clamp(0.2em, 0.8cqw, 5em);
+    padding: 0em 2.5em;
+    min-width: 600px;
+    font-size: clamp(0.5rem, 0.25rem + 0.7vw, 5rem);
+
 }
 
 .header .material-symbols-outlined {
-    font-size: 2cqw;
+    font-size: clamp(0.5rem, 0.25rem + 1.5vw, 5rem);
 }
 
 .search-bar {
@@ -145,6 +148,7 @@ body {
     margin: 0;
     align-items: center;
     justify-items: center;
+    padding: 1em;
 }
 
 form {
@@ -156,10 +160,10 @@ form {
 .search-bar input[type="text"] {
     flex-grow: 1;
     flex-shrink: 1;
-    font-size: clamp(0.2em, 1cqw, 5em);
+    font-size: clamp(0.5rem, 0.25rem + 0.8vw, 5rem);
     background-color: rgb(218, 218, 218);
     margin-right: 4em;
-    /* padding: 0.6em 1.2em; */
+    padding: 0.6em 1.2em;
     border: none;
     border-radius: 20px;
 }
@@ -242,17 +246,18 @@ form {
     align-self: center;
     justify-self: center;
     object-fit: cover;
+    padding: 0.25em;
 }
 
 .salutation {
     grid-area: 1 / 2 / 2 / 3;
-    font-size: clamp(0.2em, 1cqw, 5em);
+    font-size: clamp(0.5rem, 0.25rem + 1vw, 5rem);
     align-self: self-end;
 }
 
 .jumbo-user {
     grid-area: 2 / 2 / 3 / 3;
-    font-size: clamp(0.2em, 2cqw, 5em);
+    font-size: clamp(0.5rem, 0.5rem + 1.5vw, 5rem);
     align-self: self-start;
 }
 
@@ -261,14 +266,15 @@ form {
     display: flex;
     flex-flow: row;
     align-items: center;
+    justify-content: space-evenly;
     gap: 1.5em;
 }
 
 .header-buttons input[type="button"] {
     background-color:  inherit;
     color: rgb(45, 130, 221);
-    /* padding: 1em 2em; */
-    font-size: clamp(0.2em, 1cqw, 5em);
+    padding: 0.8em 1.5em;
+    font-size: clamp(0.5rem, 0.25rem + 0.75vw, 5rem);
     font-weight: 600;
     border: 2px solid rgb(45, 130, 221);
     border-radius: 2em;
@@ -302,28 +308,27 @@ form {
     grid-template-columns: 3fr 1fr;
     min-height: 0;
     background-color: rgb(240, 240, 240);
-    /* padding: 0.5em 2em; */
+    padding: 0.5em 2em;
 }
 
 .main-left, .main-right {
     display: flex;
     flex-flow: column;
     height: 100%;
-    /* padding: 1em; */
+    padding: 1em;
     margin: 0;
     /* justify-content: space-evenly; */
     box-sizing: border-box;
 }
 
 .main-left .material-symbols-outlined {
-    font-size: clamp(0.2em, 2cqw, 5em);
+    font-size: clamp(0.5rem, 0.25rem + 1.25vw, 5rem);
 }
 
 .main-title {
     display: block;
-    font-size: clamp(0.2em, 1.3em, 5em);
-    /* padding-top: 0.5em;
-    padding-bottom: 0.5em; */
+    font-size: clamp(0.5rem, 0.25rem + 0.8vw, 5rem);
+    padding: 1em 1em 1em 0em;
     margin: 0;
 }
 
@@ -331,6 +336,7 @@ form {
     background-color: transparent;
     display: grid;
     gap: 1.5em;
+    padding: 1em 1em 1em 0em;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
     height: 100%;
@@ -342,7 +348,10 @@ form {
 }
 
 .project-card {
-    font-size: clamp(0.2em, 1.1em, 5em);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: clamp(0.5rem, 0.25rem + 0.7vw, 5rem);
     border-left: 1em solid rgb(255, 213, 43);
 }
 
@@ -367,8 +376,6 @@ form {
 .project-btn {
     border: none;
     background-color: inherit;
-    /* padding: 0.2em; */
-    margin-top: 1.5em;
     justify-content: end;
     transition: 
         transform 200ms ease-in-out,
@@ -412,7 +419,7 @@ form {
     flex-grow: 0;
 
     background-color: white;
-    /* padding: 1.5em; */
+    padding: 1.5em;
     border-radius: 0.5em;
     box-shadow: 0em 0.3em 0.5em grey;
     margin-bottom: 0;
@@ -420,7 +427,7 @@ form {
 
 .announcements,
 .trending {
-    font-size: clamp(0.2em, 0.8em, 5em);
+    font-size: clamp(0.5rem, 0.25rem + 0.5vw, 5rem);
 }
 
 .announcement-card {
@@ -439,12 +446,32 @@ form {
     background-color: rgb(159, 159, 159);
 }
 
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
 .trending-card {
     display: grid;
-    gap: 1em;
-    grid-template-columns: 1fr 3fr;
-    /* padding: 1em; */
+    grid-template-columns: min-content 1fr;
 }
+
+.trending-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.trending-card img {
+    justify-self: center;
+    align-self: center;
+}
+
+
 
 @keyframes pulse-animation {
     0% {
