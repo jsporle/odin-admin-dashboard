@@ -3,6 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
     text-decoration: none;
+    outline: 1px solid red !important;
 }
 
 ul, ol {
@@ -23,7 +24,11 @@ ul, ol {
   justify-content: center;
 }
 
-
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
 body {
     font-family: sans-serif;
     font-weight: 900;
@@ -34,7 +39,7 @@ body {
     display: grid;
     grid-template-columns: minmax(180px, 1fr) 4fr;
     grid-template-rows: auto 1fr;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -294,9 +299,12 @@ form {
 /* main section */
 .main {
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-columns: 11fr 5fr;
+    grid-template-rows: 1fr;
     background-color: rgb(240, 240, 240);
     padding: 0.5em 2em;
+    min-height: 0;
+    overflow-y: auto;
 }
 
 .main-left {
@@ -310,8 +318,10 @@ form {
 }
 
 .main-title {
+    display: block;
     font-size: clamp(0.2em, 1.5vw, 5em);
-    padding: 1em 0em;
+    padding: 0em;
+    margin: 0;
 }
 
 .projects {
@@ -388,23 +398,27 @@ form {
 }
 
 .main-right {
-    grid-area: 1 / 2 / 3 / 3;
-    margin-top: 2em;
-    margin-left: 3em;
+    grid-area: 1 / 2 / 2 / 3;
+    margin-top: 1em;
+    margin-left: 2em;
 }
 
-.announcements {
+.container-announcements, .container-trending {
     display: flex;
     flex-flow: column;
+    gap: 0.8em;
+    margin-bottom: 2em;
+}
+
+.announcements, .trending {
     font-weight: 100;
     font-size: clamp(0.2em, 0.6vw, 5em);
     text-align: justify;
     background-color: white;
-    margin-top: 1em;
-    padding: 1.5em 4em;
-    gap: 0;
+    padding: 1.5em;
     border-radius: 0.5em;
     box-shadow: 0em 0.3em 0.5em grey;
+    margin-bottom: 0;
 }
 
 .announcement-title {
@@ -416,6 +430,7 @@ form {
     padding: 1em 0;
 }
 
+/* add line between each displayed card */
 .announcement-card:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -426,6 +441,12 @@ form {
     background-color: rgb(159, 159, 159);
 }
 
+.trending-card {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 3fr;
+    padding: 1em;
+}
 
 @keyframes pulse-animation {
     0% {
